@@ -1,3 +1,57 @@
+## Installation in Windows
+First check that you have the requared programs.
+Open the terminal and type:
+```
+git --version
+```
+Followed by:
+```
+node --version
+```
+Followed by:
+```
+npm --version:
+```
+Each should give you a version.
+
+Lets install React.
+
+Use the package manager npm to install your app:
+```
+npm create-react-app my-app-react
+```
+Install DOM bindings for your React Router:
+```
+npm install --save react-router-dom
+```
+Run the project:
+```
+cd my-app-react
+npm start
+```
+Expected output in the terminal:
+```
+> my-app-react@0.1.0 start C:\<your search way>
+> react-scripts start
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view my-app-react in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://<your ip adress>:3000/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+```
+Open a browser and it will automatic take you to port localhost:3000.
+
+Enjoy !
+
+Read more with [Reactjs](http://reactjs.org).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
