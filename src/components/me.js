@@ -1,17 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown';
 
-import '../style/me.css';
+class Me extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: null
+        };
+    }
 
-const Me = () => {
+    componentDidMount() {
+        fetch('http://localhost:1337/')
+        .then(response => response.json())
+        .then(data => {
+            this.setState({ data })
+            console.log(this.state.data);
+        })
+    }
+
+    //componentDidMount() {
+    ////        .then(res => res.json())
+    //        .then(res => this.setState({ content: res.data.content }));
+    //}
+
+    render() {
         return (
-            <div className="me-page">
-            <h1>Välkommen !</h1>
-
-            <p>Denna sida är en del i kursen jsramverk genom BTH. Jag har valt att använda ramverket React och sidan kommer förhoppningsvis att utvecklas till det mer positiva under kursens gång. Och här kommer lite om mig.</p>
-
-            <p>Jag heter Sofia Ravelin. Född och uppvuxen i Sollentuna, Stockholm och numera boende i Eksjö, Småland med man och barn. Jag har jobbat inom förskola, i butik och som receptionist. I det akademiska bagaget har jag läst ett tekniskt basår samt lite pedagogik. I medalj har jag genomfört en tjejklassiker och GMU.</p>
+            <div>
+                <h1>Välkommen</h1>
+                <article className="article-standard"
+                dangerouslySetInnerHTML={{__html: this.state.data}} >
+                </article>
             </div>
         );
-};
+    }
+}
 
 export default Me;
