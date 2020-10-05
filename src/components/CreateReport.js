@@ -29,7 +29,7 @@ export default class CreateReport extends Component {
             content: this.state.content
         }
 
-        fetch("http://localhost:1337/reports/", {
+        fetch('https://jsramverk-react-backend.sofiaravelin.ninja/reports/', {
             method: 'POST',
             headers: {
                 'x-access-token': token.token,

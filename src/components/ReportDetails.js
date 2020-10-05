@@ -14,7 +14,7 @@ class ReportDetails extends Component {
 
     componentDidMount() {
         let week = this.props.match.params.week;
-        fetch('http://localhost:1337/reports/week/' + week)
+        fetch('https://jsramverk-react-backend.sofiaravelin.ninja/reports/week/' + week)
         .then(response => response.json())
         .then(data => {
             this.setState({

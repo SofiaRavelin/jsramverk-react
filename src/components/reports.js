@@ -20,7 +20,7 @@ export default class Reports extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:1337/reports/')
+        fetch('https://jsramverk-react-backend.sofiaravelin.ninja/reports/')
         .then((response) => response.json())
         .then(res => {
             this.setState({

@@ -22,7 +22,7 @@ export default class Login extends Component {
 
         console.log(userObject);
 
-        fetch('http://localhost:1337/login/', {
+        fetch('https://jsramverk-react-backend.sofiaravelin.ninja/login/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

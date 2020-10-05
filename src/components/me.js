@@ -10,7 +10,7 @@ class Me extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:1337/')
+        fetch('https://jsramverk-react-backend.sofiaravelin.ninja/')
         .then(response => response.json())
         .then(data => {
             this.setState({ data })

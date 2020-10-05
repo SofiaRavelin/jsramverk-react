@@ -31,7 +31,7 @@ export default class Register extends Component {
         }
 
 
-        fetch('http://localhost:1337/register/', {
+        fetch('https://jsramverk-react-backend.sofiaravelin.ninja/register/', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
